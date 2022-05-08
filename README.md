@@ -9,4 +9,4 @@
  * Ratings表，包含影片ID，平均评分，参评人数
  * Principals表，包含影片ID，顺序，人物ID，种类，工作，扮演角色
 ##E-R图
-![](./E-R.jpg 'ER图')
+![image](./E-R.jpg)
