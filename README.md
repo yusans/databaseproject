@@ -1,5 +1,5 @@
 # databaseproject
-    模仿IMDB的影片管理系统
+    模仿IMDB的影片管理系统(IMDb Datasets (http://www.imdb.com/interfaces );)
 ## **各个数据表**：
  * Namebasics表，存储人员相关信息，包括人员id（nconst），姓名，出生死亡年份，主要工作，成名作
  * Titlebasics表，存储影片相关信息，包括影片ID（tconst），标题类型，标题，原名，是否为成人级，上映下映年份，时长，种类
