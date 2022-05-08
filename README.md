@@ -10,4 +10,4 @@
  * Principals表，包含影片ID，顺序，人物ID，种类，工作，扮演角色
  
 ##E-R图:
-![image](./E-R.jpg)
+* ![image](./E-R.jpg)
