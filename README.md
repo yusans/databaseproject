@@ -8,5 +8,6 @@
  * Titleakas表，包含影片ID，顺序，标题，地区，语言，类型，属性，是否原名
  * Ratings表，包含影片ID，平均评分，参评人数
  * Principals表，包含影片ID，顺序，人物ID，种类，工作，扮演角色
-##E-R图
+ 
+##E-R图:
 ![image](./E-R.jpg)
