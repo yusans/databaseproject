@@ -93,11 +93,11 @@ class dbSelect {
                 out[1+m]=titleType;
                 out[2+m]=primaryTitle;
                 out[3+m]=originalTitle;
-                out[4+m]=tconst;
-                out[5+m]=titleType;
-                out[6+m]=primaryTitle;
-                out[7+m]=originalTitle;
-                out[8+m]=tconst;
+                out[4+m]=isAdult;
+                out[5+m]=startYear;
+                out[6+m]=endYear;
+                out[7+m]=runtimeMinutes;
+                out[8+m]=genres;
 
                 m=m+9;
             }

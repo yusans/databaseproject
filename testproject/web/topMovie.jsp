@@ -23,8 +23,8 @@
 <sql:query dataSource="${snapshot}" var="result">
     SELECT ratings.tconst,titlebasics."primaryTitle",averagerating,numvotes FROM ratings LEFT join titlebasics
     on titlebasics.tconst=ratings.tconst
-    WHERE titlebasics.genres='movie'
     ORDER BY averagerating DESC
+    LIMIT 100
 </sql:query>
 <h1>Top100电影</h1>
 <table border="1" width="100%">

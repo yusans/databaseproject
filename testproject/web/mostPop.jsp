@@ -24,6 +24,7 @@
     SELECT ratings.tconst,titlebasics."primaryTitle",averagerating,numvotes FROM ratings LEFT join titlebasics
     on titlebasics.tconst=ratings.tconst
     ORDER BY numvotes DESC
+    LIMIT 500
 </sql:query>
 <h1>最受欢迎节目（参评人数为准）</h1>
 <table border="1" width="100%">
