@@ -1,5 +1,6 @@
 # databaseproject
     模仿IMDB的影片管理系统(IMDb Datasets (http://www.imdb.com/interfaces );)
+    数据集过大无法上传到GitHub，数据集地址（https://datasets.imdbws.com/）
 ##项目使用环境
   * opengauss/docker
   * tomcat10.0.6
