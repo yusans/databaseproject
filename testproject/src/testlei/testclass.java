@@ -31,7 +31,11 @@ class dbSelect {
     Statement stmt = null;
     String[] dbSelect(String inp){
         String[] outp=new String[4];
-
+        outp[0]="can't find";
+        outp[1]="None";
+        outp[2]="None";
+        outp[3]="None";
+        int a=0;
         try {
             Class.forName( "org.postgresql.Driver");
             c = DriverManager.getConnection( "jdbc:postgresql://localhost:15432/dbproject", "gaussdb", "Password@123");
@@ -39,9 +43,9 @@ class dbSelect {
             System.out.println( "Connect to database gaussdb successfully !");
             stmt = c.createStatement();
             String sql="SELECT * FROM titleakas where titleid=";
-            sql=sql+inp;
+            sql=sql+"'"+inp+"'";
             ResultSet rs = stmt.executeQuery( sql );
-            while ( rs.next() ) {
+            while ( rs.next() && a==0) {
                 String tconst = rs.getString( "titleid");
                 String ordering = String.valueOf(rs.getInt( "ordering"));
                 String title = rs.getString( "title");
@@ -49,12 +53,11 @@ class dbSelect {
                 String language = rs.getString( "language");
 
 
-
                 outp[0]=title;
                 outp[1]=region;
                 outp[2]=language;
                 outp[3]=ordering;
-
+                a=1;
             }
             rs.close();
             stmt.close();
@@ -78,7 +81,7 @@ class dbSelect {
             String sql="SELECT * FROM titlebasics where \"primaryTitle\" LIKE '%";
             sql=sql+ inp +"%'";
             ResultSet rs = stmt.executeQuery( sql );
-            while ( rs.next() ) {
+            while ( rs.next() && m<90 ) {
                 String tconst = rs.getString( "tconst");
                 String titleType = rs.getString( "titleType");
                 String primaryTitle = rs.getString( "primaryTitle");
@@ -128,7 +131,7 @@ class dbSelect {
             stmt = c.createStatement();
             String sql="SELECT * FROM titlebasics where tconst='"+in_tconst+"'";
             ResultSet rs = stmt.executeQuery( sql );
-            while ( rs.next() ) {
+            while ( rs.next() && m<90 ) {
                 String tconst = rs.getString( "tconst");
                 String titleType = rs.getString( "titleType");
                 String primaryTitle = rs.getString( "primaryTitle");
