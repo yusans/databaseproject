@@ -23,7 +23,7 @@
 <sql:query dataSource="${snapshot}" var="result">
     SELECT ratings.tconst,titlebasics."primaryTitle",averagerating,numvotes FROM ratings LEFT join titlebasics
     on titlebasics.tconst=ratings.tconst
-    WHERE titlebasics.genres='\N'
+    where titlebasics."titleType"='tvEpisode'
     ORDER BY averagerating DESC
     LIMIT 100
 </sql:query>
